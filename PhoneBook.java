@@ -8,8 +8,7 @@ public class PhoneBook {
 
     public static void main(String[] args) {
         int choice;
-
-        do {
+		do {
             System.out.println("\n--- PhoneBook Menu ---");
             System.out.println("1. Add Contact");
             System.out.println("2. Search Contact");
@@ -17,11 +16,9 @@ public class PhoneBook {
             System.out.println("4. Display All Contacts");
             System.out.println("5. Exit");
             System.out.print("Choose an option: ");
-
-            choice = scanner.nextInt();
+			choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
-
-            switch (choice) {
+			switch (choice) {
                 case 1:
                     addContact();
                     break;
@@ -42,8 +39,7 @@ public class PhoneBook {
             }
         } while (choice != 5);
     }
-
-    private static void addContact() {
+	private static void addContact() {
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
         System.out.print("Enter phone number: ");
@@ -51,8 +47,7 @@ public class PhoneBook {
         phonebook.put(name, phone);
         System.out.println("Contact added successfully.");
     }
-
-    private static void searchContact() {
+	private static void searchContact() {
         System.out.print("Enter name to search: ");
         String name = scanner.nextLine();
         if (phonebook.containsKey(name)) {
